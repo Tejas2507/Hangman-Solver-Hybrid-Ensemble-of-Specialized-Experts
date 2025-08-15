@@ -1,2 +1,14 @@
-# Hangman-Solver-Hybrid-Ensemble-of-Specialized-Experts
-Hangman Solver uses a hybrid ensemble of 5 neural experts (3 Transformers, 2 CANINE) to dynamically adapt guesses. Early game: dictionary stats. Mid/late: weighted expert voting. Achieves high precision via specialization and fallbacks. Outperforms single-model approaches.
+# Hangman Solver: Hybrid Ensemble of Specialized Experts  
+
+An AI agent that dynamically blends multiple neural experts to solve Hangman with high precision.  
+
+## Overview  
+This project implements a **hybrid ensemble of five specialized models** (Transformers and CANINE) to play Hangman optimally at every stage. The system adapts its strategy based on the game's ambiguity, transitioning from statistical heuristics to neural expert voting as letters are revealed.  
+
+## Key Features  
+- **Five specialized experts**:  
+  - Three custom Transformers (early/mid/late-game).  
+  - Two fine-tuned CANINE models (high/low ambiguity).  
+- **Dynamic inference engine**: Blends expert predictions using mask-aware weighting.  
+- **Fallback mechanisms**: Ensures guesses are always logical (dictionary frequency → English letter frequency).  
+
